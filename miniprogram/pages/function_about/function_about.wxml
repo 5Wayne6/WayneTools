@@ -12,7 +12,7 @@
   <view class="contain">
     <view class="about_1">蓝牙水控器</view>
   </view>
-  <view class="about_2">调用蓝牙适配模块(这个微信还不能强制开启手机蓝牙，只能检测，用户自己开，真无语了~~)，搜索附近的蓝牙设备(这个搜索接口我还要开定位，真垃圾啊)，我写了个过滤功能函数，只会匹配"Water"开头的设备，也就是佛科院的水控器，选择想要连接的水控器，获取deviceId，接着找到连接设备对应的service.uuid，再找到对应的characteristic.uuid，之后往设备写入uuid对应的二进制值(wc，这个uuid简直丑到爆炸)，就可以使用热水了；后面还有退出功能，关闭蓝牙模块，这些比较简单。(md，忘了写错误提示，唉~)</view>
+  <view class="about_2">调用蓝牙适配模块(这个微信还不能强制开启手机蓝牙，只能检测，用户自己开，真无语了~~)，搜索附近的蓝牙设备(这个搜索接口我还要开定位，真垃圾啊)，我写了个过滤功能函数，只会匹配"Water"开头的设备，也就是佛科院的水控器，选择想要连接的水控器，获取deviceId，接着找到连接设备对应的service.uuid，再找到对应的characteristic.uuid，之后往设备写入uuid对应的二进制值(wc，这个uuid简直丑到爆炸)，就可以使用热水了；后面还有退出功能，关闭蓝牙模块，这些比较简单。(md，忘了写错误提示~)</view>
   <view class="contain">
     <view class="about_1">手持弹幕</view>
   </view>

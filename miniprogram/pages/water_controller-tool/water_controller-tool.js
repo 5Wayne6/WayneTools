@@ -114,14 +114,21 @@ Page({
             
             wx.onBluetoothDeviceFound(function(res) {//发现设备
               if(res.devices[0].name && res.devices[0].name.startsWith("Water")){
-                let deviceList = self.data.device_all;//这里发现一个bug，重复打开会添加重复的水控器(暂时未修复)
-                deviceList.push(res.devices[0]);
-                self.setData({
-                  device_all: deviceList
-                });
-                console.log("符合条件的：",res.devices[0])
+                let deviceList = self.data.device_all;//这里发现一个bug，重复打开会添加重复的水控器(已修复)                
+                let add_device = false;//判断是否被添加过
+                deviceList.forEach((item) => {
+                  if(item.name == res.devices[0].name) add_device = true;//发现被添加过
+                });               
+                if(add_device == false){//要是没被添加过
+                  deviceList.push(res.devices[0]);
+                  self.setData({
+                    device_all: deviceList
+                  });
+                  console.log("符合条件的：",res.devices[0]);
+                }
               }
             });//发现设备
+            
           },
           fail: function(err) {//搜索
             console.error("无法搜索蓝牙设备：", err);
