@@ -1,0 +1,44 @@
+<!--pages/water_controller-tool/water_controller-tool.wxml-->
+<view class="main">
+
+  <view class="contain_start">
+    <button class="main-button" bindtap="handleButtonClick" disabled="{{buttonDisabled}}">{{main_button}}</button>
+    <button class="back-button" bind:tap="back">返回</button>
+    <text class="device-status">{{device_status}}</text>
+  </view>
+
+  <view class="separator">
+    <view class="separator_inner"></view>
+  </view>
+
+  <view class="about" style="white-space: pre-line;">
+  使用请先打开和授权蓝牙功能，因微信官方API接口原因，部分安卓机型需要同时打开定位功能（ios未知）。\n本人亲测佛科院水控器可用\n(机型：OnePlus Ace2 Pro)
+  </view>
+
+  <view class="separator">
+    <view class="separator_inner"></view>
+  </view>
+
+  <view class="about">
+  (这是小程序最难写的功能，还得回学校调试水控器，花了我好几天，wc，这个蓝牙的uuid巨丑，还要换成二进制，当时看到直接打游戏去了)
+  </view>
+
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showble}}"></view>
+  <view class="modal-dialog" wx:if="{{showble}}">
+    <view class="modal-title">可连接的蓝牙</view>
+    <view class="modal-content">
+      <scroll-view scroll-y="true" style="height:150px;width:100%">
+        <view wx:for="{{device_all}}" wx:key="deviceId" bindtap="connect" data-dev="{{item}}">
+          <button class="info">
+            <view class="name" style="white-space: pre-wrap;width:500rpx;height:40rpx" >{{item.name}}</view>
+          </button>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    </view>
+  </view>
+
+</view>
+

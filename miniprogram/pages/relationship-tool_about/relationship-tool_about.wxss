@@ -1,0 +1,27 @@
+/* pages/relationship-tool_about/relationship-tool_about.wxss */
+
+.box{
+  margin:10px 0 0 30px; 
+  line-height: 35px;
+  display:inline; 
+  float:left;
+}
+.second{
+  text-indent:2em;  
+}
+
+.content{
+  /* text-indent:2em;  */
+  right: 35rpx;
+  white-space: pre-wrap;
+  position: relative;
+}
+
+.lgfGoWelcome {
+  /* width: 100%; */
+  color: #ffffff;
+  background-color: #78aaca;
+  position: relative;
+  margin-top: 500rpx;
+  border-radius: 20rpx;
+}

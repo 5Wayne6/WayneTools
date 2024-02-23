@@ -1,0 +1,153 @@
+/**index.wxss**/
+.title-wrapper{
+  width: 100%;
+  justify-content:center;
+  margin-bottom: 40rpx;
+  background-color: #78aaca;
+}
+
+.title-wrapper .title{
+  width: 20%;
+  height: 30px;
+  left: 35rpx;
+  font-size: 40rpx;
+  line-height: 1.3;
+  letter-spacing: 4rpx;
+  color: #ffffff;
+  position: relative;
+}
+
+.logo-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  left: 0rpx;
+  top: 10rpx;
+  margin-bottom: 50rpx;
+  position: relative;
+}
+
+.logo-wrapper .logo{
+  width: 40%;
+  justify-content: center;
+  height: 250rpx;
+  top: 5rpx;
+  left: -145rpx;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.logo-wrapper .chat{
+  position: absolute;
+  padding: 1rpx;
+  left: 470rpx;
+  top: 60rpx;
+  width: 90px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #78aaca;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  letter-spacing: 5rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.sologn-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30rpx;
+}
+
+.sologn-wrapper .sologn{
+  color: #666;
+  font-size: 12px;
+}
+
+page {
+  background-color: #ffffff;
+}
+
+.toolbutton-wrapper {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10rpx 30rpx;
+	margin-top: 10rpx;
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #78aaca;
+	padding: 20rpx 0rpx;
+	border-radius: 20rpx;
+}
+
+.menu .item {
+	width: 33.3%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 180rpx;
+}
+
+.menu .item .item-inner {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.menu .item-inner .img {
+	width: 105rpx;
+	height: 105rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f2f2f2;
+  border-radius: 40rpx;
+}
+
+.menu .item-inner .img image {
+	width: 75rpx;
+	height: 75rpx;
+}
+
+.menu .item-inner .title {
+	margin-top: 20rpx;
+	font-size: 30rpx;
+	color: #ffffff;
+}
+
+.icon{
+  opacity: 0.75;
+}
+
+.separator{
+  display: flex;
+  justify-content: center; /* 主轴居中对齐 */
+}
+
+.separator_inner{
+  width: 90%;
+  border-bottom: 2px solid #ddd; /* 底边框样式，颜色可以根据需求自定义 */
+  margin: 15px 0; /* 上下边距，根据需求调整 */
+}
+
+.end{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.version-author{
+  font-size: 25rpx;
+  color: #888888;
+}
