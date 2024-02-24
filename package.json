@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "units-convert": "^1.2.3"
+  },
+  "name": "waynetools-master",
+  "description": "这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

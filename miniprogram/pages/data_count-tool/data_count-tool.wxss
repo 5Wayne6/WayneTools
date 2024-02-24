@@ -1,0 +1,59 @@
+/* pages/data_count-tool/data_count-tool.wxss */
+page{
+  width:100%;
+  height:100%;
+  background-color: #ffffff;
+}
+
+.viewStart{
+  text-align: center;
+  height: 300rpx;
+  margin-top: 25rpx;
+}
+
+.title{
+  color: #797979;
+  margin-bottom: 15rpx;
+}
+
+.contain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picker{
+  font-size: 35rpx;
+  color: #ffffff;
+  background-color: #78aaca;
+  padding: 25rpx;
+  border-radius: 20rpx;
+}
+
+.btn{
+  text-align: center;
+  font-size: 35rpx;
+  width: 80%;
+  margin-top: 30rpx;
+  border-radius: 30rpx; 
+  background-color: #78aaca;
+  color: #ffffff;
+}
+
+.viewEnd{
+  text-align: center;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+}
+
+.button{
+  background-color: #78aaca;
+  color: #ffffff;
+  border-radius: 30rpx;
+  margin-top: 15rpx;
+  margin-bottom: 30rpx;
+}
+
+.imgEnd{
+  text-align: center;
+}

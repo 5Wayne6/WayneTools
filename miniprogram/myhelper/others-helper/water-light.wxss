@@ -1,0 +1,17 @@
+html {
+  scrollbar-color: #aaa #fff;
+  scrollbar-color: #aaa #efefef;
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  line-height: 1.4;
+  max-width: 800rpx; /* 使用 rpx 单位 */
+  margin: 40rpx auto; /* 使用 rpx 单位 */
+  padding: 0 20rpx; /* 使用 rpx 单位 */
+  word-wrap: break-word;
+  color: #363636;
+  background: #fff;
+  text-rendering: optimizeLegibility;
+}

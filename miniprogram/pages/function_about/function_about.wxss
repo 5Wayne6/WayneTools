@@ -1,0 +1,39 @@
+/* pages/function_about/function_about.wxss */
+.main{
+  margin: 10rpx;
+}
+
+.contain{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+
+.about_1{
+  background-color: #78aaca;
+  color: #ffffff;
+  font-size: 45rpx;
+  font-weight: bold;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  border-radius: 25rpx;
+}
+
+.about_2{
+  background-color: #78aaca;
+  color: #ffffff;
+  font-size: 28rpx;
+  font-weight: 100;
+  padding: 15rpx;
+  border-radius: 25rpx;
+}
+
+.back-button{
+  color: #ffffff;
+  background-color: #78aaca;
+  text-align: center;
+  margin: 40rpx auto;
+}

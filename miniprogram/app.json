@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/string-qr-tool/string-qr-tool",
+    "pages/relationship-tool/relationship-tool",
+    "pages/relationship-tool_about/relationship-tool_about",
+    "pages/protractor-tool/protractor-tool",
+    "pages/scrolling-tool/scrolling-tool",
+    "pages/show_scrolling-tool/show_scrolling-tool",
+    "pages/Unit_convert-tool/Unit_convert-tool",
+    "pages/scale_convert-tool/scale_convert-tool",
+    "pages/data_count-tool/data_count-tool",
+    "pages/random_num-tool/random_num-tool",
+    "pages/water_controller-tool/water_controller-tool",
+    "pages/function_about/function_about"
+  ],
+  "window": {
+    "backgroundColor": "#5d85a0",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#78aaca",
+    "navigationBarTitleText": "WayneTools",
+    "navigationBarTextStyle": "white"
+  },
+
+  "tabBar": {
+    "selectedColor": "#2585F1",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/coffee.png",
+        "selectedIconPath": "images/icon/coffeeing.png"
+      },
+
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/icon/person.png",
+        "selectedIconPath": "images/icon/personing.png"
+      }
+    ]
+  },
+
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "微信不能强制打开手机设置，请手动打开蓝牙和定位" 
+    }
+  }
+  
+}

@@ -1,0 +1,3 @@
+<!--pages/show_scrolling-tool/show_scrolling-tool.wxml-->
+<canvas canvasId="bgCanvas" id="bgCanvas"></canvas>
+<canvas canvasId="textCanvas" id="textCanvas"></canvas>

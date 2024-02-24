@@ -1,0 +1,18 @@
+<!--pages/relationship-tool_about/relationship-tool_about.wxml-->
+<view id="aboutUs">  
+    <view class="box">  
+      <view >使用说明:</view> 
+      <view class="second">← 清除上一层关系</view>
+      <view class="second">AC 清除所有输入</view>
+      <view >
+        说明：
+      </view>
+      <view class="content">
+        1.同性关系处理 如当为男性时，一开始点击夫不做处理。
+        2.字数超出限制会停止计算关系。
+      </view>
+    </view> 
+    
+    <button class='lgfGoWelcome' bindtap="navigateBack"  >返回</button>  
+
+</view>  

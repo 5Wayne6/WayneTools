@@ -1,0 +1,24 @@
+<!--pages/about/about.wxml-->
+<view class="title-wrapper">
+  <view class="title">关于</view>
+</view>
+
+<view class="logo-wrapper">
+  <image class="logo" src="../../images/index-icon/dog.jpg" />
+</view>
+
+<view class="introduction-wrapper">
+  <view class="introduction">
+  <button bind:tap="introduce" data-url="/pages/function_about/function_about" class="button">关于功能</button>
+  <button bind:tap="ClearAll" class="button">清除缓存</button>
+  </view>
+</view>
+
+<view class="end">
+ <view class="version-author">Version: {{version}}</view>
+ <view class="version-author">Author: {{author}}</view>
+</view>
+
+<view class="endlogo-wrapper" style="width: 638rpx; height: 266rpx; display: flex; box-sizing: border-box">
+  <image style="width: 640rpx; height: 266rpx; display: block; box-sizing: border-box" class="endlogo" src="../../images/index-icon/birds.png" />
+</view>

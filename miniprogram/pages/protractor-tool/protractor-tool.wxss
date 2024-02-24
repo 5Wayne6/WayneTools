@@ -1,0 +1,78 @@
+/* pages/protractor-tool/protractor-tool.wxss */
+.container,camera,page {
+  height: 100%;
+}
+
+camera {
+  z-index: 1;
+}
+
+#can,#can2 {
+  background-color: initial;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+#can2 {
+  z-index: 50;
+}
+
+.co {
+  background-color: initial;
+  bottom: -40rpx;
+  height: 80rpx;
+  position: fixed;
+  right: 40rpx;
+  transform: rotateZ(90deg);
+  transform-origin: right top;
+  z-index: 99;
+}
+
+.co .int{
+  background: #78aaca;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  z-index: 199;
+  height: 80rpx;
+  width: 180rpx;
+  text-align: center;
+}
+
+.showWrap {
+  right: 140rpx;
+}
+
+.takeWrap {
+  right: 240rpx;
+}
+
+.chi {
+  background-color: #5bc0de;
+}
+
+.co .ph {
+  background-color: #f0ad4e;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  z-index: 199;
+  height: 80rpx;
+  width: 180rpx;
+  text-align: center;
+}
+
+.co .take{
+  background: #5cb85c;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  z-index: 199;
+  height: 80rpx;
+  width: 180rpx;
+  text-align: center;
+}

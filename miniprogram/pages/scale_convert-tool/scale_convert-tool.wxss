@@ -1,0 +1,46 @@
+/* pages/scale_convert-tool/scale_convert-tool.wxss */
+.divmiddle_column {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column; /*主轴是垂直 从上到下*/
+  flex-wrap: nowrap; /*不换行*/
+  width: 100%;
+  text-align:left;
+}
+
+.forinput {
+  display: flex;
+  width: 95%;
+  border: 3rpx solid gray;
+  border-radius: 5rpx;
+  margin: 2%;
+  text-align: left;
+}
+
+.divmiddle_row {
+  display: flex;
+  flex-direction: row; /*主轴是水平，从左到右*/
+  flex-wrap: nowrap; /*不换行*/
+  margin-top: 20rpx;
+  width: 100%;
+  text-align:left;
+}
+
+.button{
+  top: 50rpx;
+  position: relative;
+}
+
+.empty{
+  margin-top: 40rpx;
+  border-radius: 20rpx;
+  background-color: #78aaca;
+  color: #ffffff;
+}
+
+.back{
+  margin-top: 60rpx;
+  border-radius: 20rpx;
+  background-color: #78aaca;
+  color: #ffffff;
+}

@@ -1,0 +1,121 @@
+<!--index.wxml-->
+<view class="title-wrapper">
+  <view class="title">工具箱</view>
+</view>
+
+<view class="logo-wrapper">
+  <image class="logo" src="../../images/index-icon/logo.png" />
+  <view class="chat">{{welcome}}</view>
+</view>
+
+<view class="sologn-wrapper">
+  <view class="sologn">{{slogan[random]}}</view>
+</view>
+
+<view class="toolbutton-wrapper">
+  <view class="menu">
+
+    <view bindtap="url" data-url="/pages/string-qr-tool/string-qr-tool" class="item">
+      <view class="item-inner">
+        <view class="img">
+          <image class="icon" src="../../images/icon/button.png" />
+        </view>
+        <view class="title">生成二维码</view>
+      </view>
+    </view>
+
+    <view bindtap="url" data-url="/pages/relationship-tool/relationship-tool" class="item">
+      <view class="item-inner">
+        <view class="img">
+          <image class="icon" src="../../images/icon/button.png" />
+        </view>
+        <view class="title">亲戚计算器</view>
+      </view>
+    </view>
+
+
+    <view bindtap="url" data-url="/pages/water_controller-tool/water_controller-tool" class="item">
+      <view class="item-inner">
+        <view class="img">
+          <image class="icon" src="../../images/icon/button.png" />
+        </view>
+        <view class="title">蓝牙水控器</view>
+      </view>
+    </view>
+
+    <view bindtap="url" data-url="/pages/scrolling-tool/scrolling-tool" class="item">
+      <view class="item-inner">
+        <view class="img">
+          <image class="icon" src="../../images/icon/button.png" />
+        </view>
+        <view class="title">手持弹幕</view>
+      </view>
+    </view> 
+
+    <view bindtap="url" data-url="/pages/Unit_convert-tool/Unit_convert-tool" class="item">
+      <view class="item-inner">
+        <view class="img">
+          <image class="icon" src="../../images/icon/button.png" />
+        </view>
+        <view class="title">单位换算</view>
+      </view>
+    </view> 
+
+    <view bindtap="url" data-url="/pages/protractor-tool/protractor-tool" class="item">
+      <view class="item-inner">
+        <view class="img">
+          <image class="icon" src="../../images/icon/button.png" />
+        </view>
+        <view class="title">量角器</view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<view class="separator">
+  <view class="separator_inner"></view>
+</view>
+
+<view class="toolbutton-wrapper">
+  <view class="menu">
+
+    <view bindtap="url" data-url="/pages/data_count-tool/data_count-tool" class="item">
+      <view class="item-inner">
+        <view class="img">
+          <image class="icon" src="../../images/icon/button.png" />
+        </view>
+        <view class="title">日期计算</view>
+      </view>
+    </view>
+
+    <view bindtap="url" data-url="/pages/random_num-tool/random_num-tool" class="item">
+      <view class="item-inner">
+        <view class="img">
+          <image class="icon" src="../../images/icon/button.png" />
+        </view>
+        <view class="title">随机数</view>
+      </view>
+    </view>
+
+    <view bindtap="url" data-url="/pages/scale_convert-tool/scale_convert-tool" class="item">
+      <view class="item-inner">
+        <view class="img">
+          <image class="icon" src="../../images/icon/button.png" />
+        </view>
+        <view class="title">进制换算</view>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+
+<view class="separator">
+  <view class="separator_inner"></view>
+</view>
+
+<view class="end">
+ <view class="version-author">Version: {{version}}</view>
+ <view class="version-author">Author: {{author}}</view>
+</view>

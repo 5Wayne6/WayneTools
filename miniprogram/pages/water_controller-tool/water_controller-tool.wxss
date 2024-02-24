@@ -1,0 +1,207 @@
+/* pages/water_controller-tool/water_controller-tool.wxss */
+.contain_start{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+  margin-top: 130rpx;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.main-button{
+  color: #ffffff;
+  background-color: #78aaca;
+  border-radius: 25rpx;
+  text-align: center;
+}
+
+.device-status{
+  margin-top: 30rpx;
+  text-align: center;
+  font-weight: 400;
+}
+
+.about{
+  background-color: #78aaca;
+  color: #ffffff;
+  font-size: 40rpx;
+  font-weight: 600;
+  padding: 30rpx;
+  border-radius: 25rpx;
+}
+
+.label {
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #2d2d2d;
+  color: #EEE;
+}
+.item {
+  position: relative;
+  padding: 10px;
+  margin: 5px 5px;
+  height: 90px;
+  border-bottom: 1px solid #D0D0D0;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.item .rss {
+  position: absolute;
+  height: 70px;
+  line-height: 70px;
+  right: 10px;
+}
+.item .name {
+  height: 30px;
+  line-height: 30px;
+  border: 3rpx solid #faca82;
+}
+.item .uuid {
+  padding-right: 50px;
+  height: 40px;
+  line-height: 1.5;
+  font-size: 12px;
+}
+.showModal{
+  position:absolute;
+  height:50px;
+  left:30%;
+  width:40%;
+  top:40%;
+  background: rgb(95, 228, 83);
+  color:#fff;
+  font-size: 20px;
+}
+/*以下全是弹窗样式*/
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+.modal-dialog {
+  width: 80%;
+  overflow: hidden;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin-top: -180rpx;
+  margin-left: 10%;
+  border-radius: 36rpx;
+}
+.modal-title {
+  padding-top: 30rpx;
+  font-size: 20px;
+  color: #030303;
+  text-align: center;
+}
+.modal-title-sc {
+  padding-top: 10rpx;
+  font-size: 15px;
+  color: #bebcbc;
+  text-align: center;
+}
+.modal-content {
+  /* padding: 0rpx 0rpx; */
+ padding:0rpx 0rpx;
+ height: 400rpx;
+ text-align: left;
+}
+.info{
+  height:40px;
+  left:-120rpx;
+  right: -150rpx;
+  text-align:left;
+  font-size:35rpx;
+  color:#0a0000;
+}
+.info::after{
+  border: 0px;
+}
+.name_List{
+  position:absolute;
+  left:0%;
+  width:150%;
+  text-align: left;
+  border: 3rpx solid #faca82;
+}
+.quantity_List{
+  position:absolute;
+  left:40%;
+  width:50%;
+  text-align: left;
+}
+.reason_List{
+  position:absolute;
+  left:50%;
+  width:50%;
+  text-align: right;
+  overflow: hidden;
+}
+.modal-content-return{
+  padding: 15rpx 32rpx;
+  font-size: 15px;
+  color: #bebcbc;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 100%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.bluetooth{
+  display: flex;
+  position: relative;
+  left: 55rpx;
+  top: 50px;
+}
+
+.blelist{
+  border: 3rpx solid #faca82;
+  
+}
+
+.separator{
+  display: flex;
+  justify-content: center; /* 主轴居中对齐 */
+}
+
+.separator_inner{
+  width: 90%;
+  border-bottom: 2px solid #ddd; /* 底边框样式，颜色可以根据需求自定义 */
+  margin: 15px 0; /* 上下边距，根据需求调整 */
+}
+
+.back-button{
+  color: #ffffff;
+  background-color: #78aaca;
+  text-align: center;
+  margin-top: 30rpx;
+  border-radius: 25rpx;
+}
