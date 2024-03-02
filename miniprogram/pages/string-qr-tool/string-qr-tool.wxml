@@ -1,0 +1,16 @@
+<!--pages/responsive/responsive.wxml-->
+<view>
+    <textarea class="input-text" bindinput='inputHandler' bindconfirm='confirmHandler' placeholder='输入需要转换为二维码的字符串' value='{{text}}'></textarea>
+</view>
+<view class='button-wrapper'>
+    <button class="button" bindtap='tapHandler'>转为二维码</button>
+</view>
+<canvas class='canvas' style="width:{{qrcodeWidth}}px; height:{{qrcodeWidth}}px;" canvas-id='canvas'></canvas>
+
+<button class="save-button" bind:tap="save">保存</button>
+<button class="back-button" bind:tap="back">返回</button>
+<!-- image显示 -->
+<!-- <view class='line'></view>
+
+<image src='{{imgsrc}}' style="display: block;margin:20rpx auto;width:{{qrcodeWidth}}px; height:{{qrcodeWidth}}px;"></image>
+<view class='tip'>以图片的形式显示</view> -->

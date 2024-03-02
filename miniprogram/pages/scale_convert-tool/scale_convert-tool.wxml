@@ -1,0 +1,29 @@
+<!--pages/scale_convert-tool/scale_convert-tool.wxml-->
+<view class='divmiddle_column'>
+  <view class="divmiddle_row">
+    <view class='forinput' style="border: 0rpx; width: 40%">10进制数：</view>
+    <input class='forinput' bindinput="KeyInput" id='10' value='{{decimal}}' placeholder="这里输入10进制数" focus/>
+  </view>
+  <view class="divmiddle_row">
+    <view class='forinput' style="border: 0rpx; width: 40%">2进制数：</view>
+    <input class='forinput' bindinput="KeyInput" id='2' value='{{twoadecimal}}' placeholder="这里输入2进制数" />
+  </view>
+  <view class="divmiddle_row">
+    <view class='forinput' style="border: 0rpx; width: 40%">8进制数：</view>
+    <input class='forinput' bindinput="KeyInput" id='8' value='{{eightadecimal}}' placeholder="这里输入8进制数" />
+  </view>
+  <view class="divmiddle_row">
+    <view class='forinput' style="border: 0rpx; width: 40%">16进制数：</view>
+    <input class='forinput' bindinput="KeyInput" id='16' value='{{hexadecimal}}' placeholder="这里输入16进制数" />
+  </view>
+  <view class="divmiddle_row">
+    <view class='forinput' style="border: 0rpx; width: 85%">ASCII字符：</view>
+    <input class='forinput' bindinput="KeyInput" id='ASCII' value='{{ASCIInum}}' placeholder="ASCII字符" />
+    <view class='forinput' style='border: 0rpx; width: 95%'>{{ASCIInum_show}}</view>
+  </view>
+  
+  <view class="button">
+    <button class='empty' bindtap='emptied' size='default' >清空</button>
+    <button class='back' bindtap='Back' size='default' >返回</button>
+  </view>
+</view>

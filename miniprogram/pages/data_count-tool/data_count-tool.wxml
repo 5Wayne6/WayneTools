@@ -1,0 +1,37 @@
+<!--pages/data_count-tool/data_count-tool.wxml-->
+<view class="viewStart">
+
+  <view class="title">选择开始日期时间</view>
+
+  <view class="contain">
+    <picker mode="date" value="{{date}}" start="1900-01-01" end="2100-01-01" bindchange="bindDateChangeStart">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+    </picker>
+  </view>
+
+  <view class="title">选择结束日期时间</view>
+
+  <view class="contain">
+    <picker mode="date" value="{{dateEnd}}" start="1900-01-01" end="2100-01-01" bindchange="bindDateChangeEnd">
+    <view class="picker">
+      当前选择: {{dateEnd}}
+    </view>
+    </picker>
+  </view>
+
+</view>
+<button class="btn" bindtap="btnGetDays">计算相差的天数</button>
+
+<view class="viewEnd">
+  <view>2个日期相差{{days}}天</view>
+  <view>大致为{{months}}个月</view>
+  <view>大约为{{years}}年</view>
+</view>
+
+<button class="button" bindtap="back">返回</button>
+
+<view class="imgEnd">
+  <image src="../../images/index-icon/blank.png"></image>
+</view>

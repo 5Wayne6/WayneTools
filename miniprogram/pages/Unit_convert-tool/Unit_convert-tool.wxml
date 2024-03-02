@@ -1,0 +1,26 @@
+<!--pages/Unit_convert-tool/Unit_convert-tool.wxml-->
+<view class="main">
+  <picker class="picker" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" range="{{multiArray}}" value="{{multiIndex}}">
+    <view class="select">
+      <view class="select_inner">{{multiArray[0][multiIndex[0]]}}</view>
+      <view class="select_inner">{{multiArray[1][multiIndex[1]]}}</view>
+      <view class="select_inner">{{multiArray[2][multiIndex[2]]}}</view>
+    </view>
+  </picker>
+ 
+  <view class="all_input">
+    <input class='input' bindinput="KeyInput" id='num1' value='{{num1}}' placeholder="输入数字" focus/>
+    <input class='input' bindinput="KeyInput" id='num2' value='{{num2}}' placeholder="输入数字" focus/>
+  </view>
+</view>
+
+<view class="instruction">
+  <view class="instruction_title">说明：</view>
+  <view class="instruction_detail">1.每次切换单位都会清空输入栏</view>
+  <view class="instruction_detail">2.支持的换算类型有：长度、质量、面积、体积、时间、温度、数据</view>
+</view>
+
+<view class="all_button">
+  <button class="button" bind:tap="Empty_clear">清空</button>
+  <button class="button" bind:tap="Back">返回</button>
+</view>

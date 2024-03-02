@@ -1,0 +1,76 @@
+/* pages/Unit_convert-tool/Unit_convert-tool.wxss */
+.main{
+  margin-top: 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.picker{
+  width: 100%;
+  margin: 10rpx;
+}
+
+.select{
+  margin: 10rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 150rpx;
+}
+
+.select_inner{
+  border-radius: 20rpx;
+  text-align: center;
+  padding: 20rpx;
+  padding-right: 15rpx;
+  background-color: #78aaca;
+  color: #ffffff;
+}
+
+.all_input{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: 30rpx;
+  margin: 10rpx;
+}
+
+.input{
+  display: flex;
+  width: 30%;
+  border: 5rpx solid gray;
+  border-radius: 5rpx;
+  margin: 2%;
+  text-align: left;
+}
+
+.instruction{
+  margin-top: 40rpx;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.instruction_title{
+  margin: 20rpx;
+  font-size: 40rpx;
+  color: #525252;
+}
+
+.instruction_detail{
+  margin: 10rpx;
+  color: #6d6d6d;
+  font-size: 30rpx;
+}
+
+.all_button{
+  margin-top: 60rpx;
+}
+
+.button{
+  color: #ffffff;
+  background-color: #78aaca;
+  text-align: center;
+  margin: 50rpx auto;
+}

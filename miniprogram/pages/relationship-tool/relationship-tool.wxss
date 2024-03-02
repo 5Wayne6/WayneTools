@@ -1,0 +1,102 @@
+/* pages/relationship-tool/relationship-tool.wxss */
+page{
+  height:100%;
+}
+.wx-switch-input{
+width:82rpx !important;
+height:40rpx !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+width:80rpx !important;
+height: 36rpx !important;
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+width: 40rpx !important;
+height: 36rpx !important;
+}
+
+.second{
+  background: #e5e5e5;
+  color: #FFFFFF;
+}
+.section{
+ background-color: #333333;
+font-size: 30rpx;
+width: 95%;
+height: 22vh;
+color: #bbbbbb;
+padding-left: 5%;
+}
+
+.textstyle {
+background-color: #ffffff;
+font-size: 30rpx;
+width: 95%;
+height: 22vh;
+color: #949494;
+padding-left: 5%;
+}
+
+.result-style{
+background-color: #ffffff;
+font-size: 20px;
+width: 100%;
+height: 10vh;
+color: #949494;
+border-color: #333333;
+
+}
+
+.body-view{
+height: 7vh;
+line-height:7vh;
+background-color: #78aaca;
+color: #ffffff;
+padding-left: 5%;
+font-size: 32rpx;
+}
+
+.btnGroup{
+  display:flex;
+  flex-direction:row;
+}
+
+.item{
+  width:25%;
+  min-height:10rpx;
+  margin:0rpx;
+  border-radius:0px;
+  text-align:center;
+  line-height:15vh;
+  display:inline-block;
+  font-size: 40rpx;
+  
+}
+.item2{
+  width:50%;
+  min-height:0rpx;
+  margin:0rpx;
+  border-radius:0px;
+  text-align:center;
+  line-height:15vh;
+  display:inline-block;
+}
+
+.orange{
+  color: #ebebeb;
+  border:solid 0px #444444;
+  background:#e7763e;
+  
+}
+.normal{
+  color: #ffffff;
+  border:solid 1px #dadada;
+  background-color: #78aaca;
+}
+.normal-orange{
+  color:#ffffff;
+  border:solid 1px #dadada;
+  background-color: #78aaca;
+}
