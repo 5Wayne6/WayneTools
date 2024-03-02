@@ -12,7 +12,7 @@
   </view>
 
   <view class="about" style="white-space: pre-line;">
-  使用请先打开和授权蓝牙功能，因微信官方API接口原因，部分安卓机型需要同时打开定位功能（ios未知）。\n本人亲测佛科院水控器可用\n(机型：OnePlus Ace2 Pro)
+  使用请先打开和授权蓝牙功能，因微信官方API接口原因，部分安卓机型需要同时打开定位功能（ios未知）。\n亲测佛科院水控器可用\n(安卓机型可用，ios未知)\n新版本:增加异常断连后实现自动重连
   </view>
 
   <view class="separator">
@@ -20,7 +20,7 @@
   </view>
 
   <view class="about">
-  (这是小程序最难写的功能，还得回学校调试水控器，花了我好几天，wc，这个蓝牙的uuid巨丑，还要换成二进制，当时看到直接打游戏去了)
+  (这是小程序最难写的功能，还得调试水控器，wc，这个蓝牙编码巨丑，还要换成二进制，当时看到直接打游戏去了)
   </view>
 
   <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showble}}"></view>

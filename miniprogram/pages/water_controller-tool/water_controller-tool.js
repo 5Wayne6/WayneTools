@@ -11,7 +11,8 @@ Page({
     device_all:[],//储存所有符合条件的蓝牙
     showble: false,//初始化蓝牙弹窗不弹出
     end_service_uuid: null,//结束使用
-    end_characteristic_uuid: null//结束使用
+    end_characteristic_uuid: null,//结束使用
+    person_end: false//用于判断是否用户主动断开连接
   },
 
   crc16changgong: function(data) {//
@@ -182,9 +183,7 @@ Page({
     this.setData({
       showble: false
     })
-    console.log(event.currentTarget.dataset.dev)
     self.data.bluetoothDevice = event.currentTarget.dataset.dev;
-    console.log("0",self.data.bluetoothDevice)
     //
     wx.createBLEConnection({//建立连接
       deviceId: self.data.bluetoothDevice.deviceId,
@@ -197,18 +196,90 @@ Page({
           }
         });
         //
+        wx.onBLEConnectionStateChange(function(res) {
+          if (res.connected == false && self.data.person_end == false) {//异常断开，进行重连
+            console.log("重连中");
+            let reconnect_deviceId = res.deviceId;
+            wx.createBLEConnection({
+              deviceId: reconnect_deviceId,
+              success: function(res) {
+                //
+                console.log("重连成功");
+                wx.getBLEDeviceServices({
+                  deviceId: reconnect_deviceId,
+                  success: async (res) => {
+                    console.log("A");
+                    for (let service of res.services) {
+                      if (service.uuid == '0000F1F0-0000-1000-8000-00805F9B34FB') {
+                        wx.getBLEDeviceCharacteristics({
+                          deviceId: reconnect_deviceId,
+                          serviceId: service.uuid,
+                          success: async (res) => {
+                            console.log("B");
+                            for (let characteristic of res.characteristics) {
+                              if (characteristic.uuid == '0000F1F1-0000-1000-8000-00805F9B34FB') {
+                                const buffer = self.makePayload(self.data.bluetoothDevice.name).buffer;
+                                wx.writeBLECharacteristicValue({
+                                  deviceId: reconnect_deviceId,
+                                  serviceId: service.uuid,
+                                  characteristicId: characteristic.uuid,
+                                  value: buffer,
+                                  success: (res) => {
+                                    console.log('重连数据写入成功', res);
+                                    self.data.isStarted = true;
+                                  },
+                                  fail: (err) => {
+                                    console.error('重连数据写入失败', err);
+                                    wx.showToast({
+                                      title: '数据写入失败',
+                                      icon: 'none',
+                                      duration: 3000
+                                    });
+                                  }
+                                });
+                                break;
+                              }
+                            }
+                          },
+                          fail: (err) => {
+                            console.error('获取特征失败', err);
+                            wx.showToast({
+                              title: '获取特征失败',
+                              icon: 'none',
+                              duration: 3000
+                            });
+                          }
+                        });
+                        break;
+                      }
+                    }
+                  },
+                  fail: (err) => {
+                    console.error('获取服务失败', err);
+                    wx.showToast({
+                      title: '获取服务失败',
+                      icon: 'none',
+                      duration: 3000
+                    });
+                  }
+                });
+                //
+              },
+            });
+          }     
+        });
+        //
         wx.getBLEDeviceServices({
           deviceId: self.data.bluetoothDevice.deviceId,
           success: async (res) => {
-            console.log("获取服务中")
-            console.log(res.services)
+            console.log("A",res.services)
             for (let service of res.services) {
               if (service.uuid == '0000F1F0-0000-1000-8000-00805F9B34FB') {
                 wx.getBLEDeviceCharacteristics({
                   deviceId: self.data.bluetoothDevice.deviceId,
                   serviceId: service.uuid,
                   success: async (res) => {
-                    console.log("获取特征值中")
+                    console.log("B",res.characteristics)
                     for (let characteristic of res.characteristics) {
                       if (characteristic.uuid == '0000F1F1-0000-1000-8000-00805F9B34FB') {
                         self.data.end_service_uuid = service.uuid;//后面用
@@ -275,6 +346,9 @@ Page({
 
   end: async function(){
     var self = this;
+    self.setData({
+      person_end: true
+    });
     const endPayload = new ArrayBuffer(6);
     const dataView = new DataView(endPayload);
     dataView.setUint8(0, 0xFE);
@@ -298,6 +372,9 @@ Page({
             wx.closeBluetoothAdapter({
               success: function (res) {
                 console.log('关闭蓝牙模块成功', res);
+                self.setData({
+                  person_end: false
+                });
               },
               fail: function (res) {
                 console.error('关闭蓝牙模块失败', res);

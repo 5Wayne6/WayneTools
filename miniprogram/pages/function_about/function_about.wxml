@@ -3,39 +3,39 @@
   <view class="contain">
     <view class="about_1">生成二维码</view>
   </view>
-  <view class="about_2">根据QRCode.js开源库进行解析，将任意字符转换成对应二维码，注意用微信或者qq扫码不支持中文字符 (这个是纯腾讯应用问题，应该是为了防止传播敏感信息吧) ，附开源库地址：https://github.com/davidshimjs/qrcodejs</view>
+  <view class="about_2">根据QRCode.js开源库进行解析，将任意字符转换成对应二维码，注意用微信或者qq扫码不支持中文字符 (腾讯应用问题，应该是为了防止传播敏感信息) ，附开源库地址：https://github.com/davidshimjs/qrcodejs</view>
   <view class="contain">
     <view class="about_1">亲戚计算器</view>
   </view>
-  <view class="about_2">基于https://github.com/mumuy/relationship的逻辑原理，编写JavaScript逻辑函数，通过微信官方原生组件实现计算器窗口及按键的实现，暂时只支持22个字符(这个过年超好用，这下没有不认识的亲戚了)。
+  <view class="about_2">基于https://github.com/mumuy/relationship的逻辑原理，暂时只支持22个字符(过年好用，把全家都认了一遍)。
   </view>
   <view class="contain">
     <view class="about_1">蓝牙水控器</view>
   </view>
-  <view class="about_2">调用蓝牙适配模块(这个微信还不能强制开启手机蓝牙，只能检测，用户自己开，真无语了~~)，搜索附近的蓝牙设备(这个搜索接口我还要开定位，真垃圾啊)，我写了个过滤功能函数，只会匹配"Water"开头的设备，也就是佛科院的水控器，选择想要连接的水控器，获取deviceId，接着找到连接设备对应的service.uuid，再找到对应的characteristic.uuid，之后往设备写入uuid对应的二进制值(wc，这个uuid简直丑到爆炸)，就可以使用热水了；后面还有退出功能，关闭蓝牙模块，这些比较简单。(md，忘了写错误提示~)</view>
+  <view class="about_2">调用蓝牙适配模块(还不能强制开启手机蓝牙，只能用户自己开，真无语了~~)，搜索附近的蓝牙设备(这个搜索接口还要开定位，真垃圾啊)，写了个过滤函数，只会匹配"Water"开头的设备，也就是佛科院的水控器，获取deviceId，之后往设备写入对应的二进制值(wc，简直丑到爆炸)，就可以用热水了。(暂时发现bug，重连只能重连一次，未修复)</view>
   <view class="contain">
     <view class="about_1">手持弹幕</view>
   </view>
-  <view class="about_2">官方原生组件input、picker等实现颜色内容，速度控制，弹幕内容的调整，进行数据绑定，借助canvas实现弹幕滚动，暂时借助手机自带返回功能进行返回操作(灵感来源于之前火过的短视频，个人觉得也还不错)</view>
+  <view class="about_2">原生组件渲染颜色内容，速度控制，借助canvas实现弹幕滚动，暂时借助手机自带返回功能进行返回操作(灵感来源于之前火过的短视频，个人觉得还不错)</view>
   <view class="contain">
     <view class="about_1">单位换算</view>
   </view>
-  <view class="about_2">通过npm安装units-convert开源库，实现不同单位间换算，最终通过数据绑定，bindinput实现实时数据转换，附开源库地址：https://github.com/shenxianhui/units-convert(这个就是纯写给自己用了，找不同单位之间的换算代码，还要一个个把不同单位放进数组里面，还是挺累人的，我去，我现在连学的数据单位都不知道一点，菜啊~~)</view>
+  <view class="about_2">npm安装units-convert开源库，实现不同单位间换算，附开源库地址：https://github.com/shenxianhui/units-convert(这个就是纯写给自己用了，找不同单位之间的换算代码，还要一个个把不同单位放进数组里面，还是挺累人的~)</view>
   <view class="contain">
     <view class="about_1">量角器</view>
   </view>
-  <view class="about_2">借助原生组件canvas进行量角器的实现，编写逻辑函数及微信官方API实现拍照，取整，打开摄像头等功能(平时量角度，凑合着用一下，这个拍照功能好用！我自己都没想到)</view>
+  <view class="about_2">用的微信官方API实现拍照，取整，打开摄像头等功能(平时量角度，凑合着用一下，这个拍照功能好用！我自己都没想到)</view>
   <view class="contain">
     <view class="about_1">日期计算</view>
   </view>
-  <view class="about_2">官方原生组件picker选择日期，编写逻辑函数运算得出相差天数。(这应该是最无聊的功能了，我自己也觉得是凑数用，是我强迫症了~~)</view>
+  <view class="about_2">原生组件picker选择日期，编写基本逻辑运算得出相差天数。(这应该是最无聊的功能了，自己也觉得是凑数用，有强迫症必须凑9个)</view>
   <view class="contain">
     <view class="about_1">随机数</view>
   </view>
-  <view class="about_2">简单随机数是通过Math.random函数随机生成小数，后通过增大倍数得出随机数。(本来想做个抽奖功能，时间有点紧了，假期我还要去我姐店里帮忙，用个随机数将就一下吧~~)</view>
+  <view class="about_2">Math.random函数随机生成小数，增大倍数得出随机数。(本想做个抽奖功能，时间有点紧了，用个随机数将就一下)</view>
   <view class="contain">
     <view class="about_1">进制换算</view>
   </view>
-  <view class="about_2">将ASCII码对应表保存js文件中，通过进制的常规算法，数据绑定，bindinput组件进行实时进制转换及ASCII码转换的实现(转进制还是很简单的，就是从网上扒ASCII码麻烦了点，用python爬虫的话又杀鸡用牛刀了)</view>
+  <view class="about_2">将ASCII码对应表保存js文件中，进制间的常规算法，得出ASCII码转换的实现(转进制还是很简单的，就是从网上复制ASCII码麻烦了点)</view>
 </view>
 <button class="back-button" bind:tap="back">返回</button>
