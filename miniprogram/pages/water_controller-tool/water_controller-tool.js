@@ -203,7 +203,6 @@ Page({
             wx.createBLEConnection({
               deviceId: reconnect_deviceId,
               success: function(res) {
-                //
                 console.log("重连成功");
                 wx.getBLEDeviceServices({
                   deviceId: reconnect_deviceId,
@@ -263,7 +262,6 @@ Page({
                     });
                   }
                 });
-                //
               },
             });
           }     
@@ -411,12 +409,32 @@ Page({
   },
 
   onLoad: function(options) {
+    var self = this;
     wx.authorize({
       scope: 'scope.bluetooth',
     })
     wx.authorize({
       scope: 'scope.userLocation',
     })
+    //
+    wx.getConnectedBluetoothDevices({
+      success: function(res) {
+        if (res.devices.length > 0) {
+          self.data.end_service_uuid = '0000F1F0-0000-1000-8000-00805F9B34FB';
+          self.data.end_characteristic_uuid = '0000F1F1-0000-1000-8000-00805F9B34FB';
+          self.data.bluetoothDevice = res.devices[0];
+          self.data.isStarted = true;
+          self.updateUi("ok");
+        } 
+        else {
+          console.log("手机未连接任何蓝牙设备");
+        }
+      },
+      fail: function(res) {
+        console.error("获取已连接蓝牙设备列表失败：", res);
+      }
+    });
+    //
   },
   
 });
